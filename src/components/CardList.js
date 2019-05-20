@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = ({ people }) => {
-  const listPeople = people.map((user, i) => {
+const CardList = ({ api_data }) => {
+  const listPeople = api_data.map((user, i) => {
     return (
       <Card
         key={user.url}
@@ -13,7 +13,7 @@ const CardList = ({ people }) => {
       />
     )}
   )
-  // console.log(listPeople.length)
+  // console.log(listPeople.length, "listpeople")
   return (
     <div>
       {listPeople}

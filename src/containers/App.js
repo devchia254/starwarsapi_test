@@ -9,53 +9,61 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      people: [], //empty array to retrieve a list from an API
+      api_data: [], //empty array to retrieve a list from an API
       searchfield: ''
     }
   }
 
   componentDidMount() {
 
-    const urls = [
-      'https://swapi.co/api/people/?page=1',
-      'https://swapi.co/api/people/?page=2',
-      'https://swapi.co/api/people/?page=3',
-      'https://swapi.co/api/people/?page=4',
-      'https://swapi.co/api/people/?page=5',
-      'https://swapi.co/api/people/?page=6',
-      'https://swapi.co/api/people/?page=7',
-      'https://swapi.co/api/people/?page=8',
-      'https://swapi.co/api/people/?page=9'
-    ]
+    const urlsArray = [];
 
-    // fetch('https://swapi.co/api/people/?page=1')
-    //   .then(response=> response.json()) //converts to json format
-    //   .then(people => {this.setState({ objects: people.results})})
-    //   .catch('error'); 
+    for(let i = 1; i < 10; i++) {
+      urlsArray.push('https://swapi.co/api/people/?page=' + i.toString());
+    }
+
+    const charsData = [];
+
+    const charsFetch = urlsArray.map(url => fetch(url)
+        .then(res => res.json())
+        .then(data => data.results.map(user => charsData.push(user)))
+    );
+
+    console.log(charsData, "charsData")
+    // const flatData = charsData.flat();
+    // console.log(flatData)
+
+    Promise.all(charsFetch)
+      .then(results => this.setState({api_data: charsData}))
+      .catch((err) => console.log('ERROR, please check', err))
+
+    // const urls = [
+    //   'https://swapi.co/api/people/?page=1',
+    //   'https://swapi.co/api/people/?page=2',
+    //   'https://swapi.co/api/people/?page=3',
+    //   'https://swapi.co/api/people/?page=4',
+    //   'https://swapi.co/api/people/?page=5',
+    //   'https://swapi.co/api/people/?page=6',
+    //   'https://swapi.co/api/people/?page=7',
+    //   'https://swapi.co/api/people/?page=8',
+    //   'https://swapi.co/api/people/?page=9'
+    // ]
+
+    // Promise.all(urls.map(async url => {
+    //   const response = await fetch(url);
+    //   const ppl = await response.json();
+    //   var combineAllPeople = this.state.api_data;
+    //   combineAllPeople.push(ppl.results);
+
+    //   var sortedAllPeople = combineAllPeople
+    //     .flat()
+    //     .sort((a, b) => a.name.localeCompare(b.name));
       
-    // try to loop through all urls instead of referring to 1 url i.e. people[i]
-    
-    // Promise.all(urls.map(url => {
-    //   return fetch(url).then(response => response.json())
+    //   this.setState({api_data: sortedAllPeople})
     // }))
-    // .then(people => {
-    //   this.setState({ people: people[2].results})
-    // })
-    // .catch('error'); 
+    //   .catch(error => console.log ('Error fetching people', error));
 
-    Promise.all(urls.map(async url => {
-      const response = await fetch(url);
-      const ppl = await response.json();
-      var combineAllPeople = this.state.people;
-      combineAllPeople.push(ppl.results);
-
-      var sortedAllPeople = combineAllPeople
-        .flat()
-        .sort((a, b) => a.name.localeCompare(b.name));
-      
-      this.setState({people: sortedAllPeople})
-    }))
-      .catch(error => console.log ('Error fetching people', error));
+    
   }
 
   onSearchChange = (event) => {
@@ -63,18 +71,18 @@ class App extends Component {
   }
 
   render() {
-    const { people, searchfield } = this.state;
-    const filteredPeople = people.filter(person =>{
+    const { api_data, searchfield } = this.state;
+    const filteredData = api_data.filter(person =>{
       return person.name.toLowerCase().includes(searchfield.toLowerCase());
     })
-    return !people.length ?
+    return !api_data.length ?
       <h1>Loading</h1> :
       (
         <div className='tc'>
           <h1 className='f1'>STAR WARS</h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
-            <CardList people={filteredPeople} />
+            <CardList api_data={filteredData} />
           </Scroll>
         </div>
       );
