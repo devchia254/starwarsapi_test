@@ -29,10 +29,6 @@ class App extends Component {
         .then(data => data.results.map(user => charsData.push(user)))
     );
 
-    console.log(charsData, "charsData")
-    // const flatData = charsData.flat();
-    // console.log(flatData)
-
     Promise.all(charsFetch)
       .then(results => this.setState({api_data: charsData}))
       .catch((err) => console.log('ERROR, please check', err))
@@ -63,7 +59,6 @@ class App extends Component {
     // }))
     //   .catch(error => console.log ('Error fetching people', error));
 
-    
   }
 
   onSearchChange = (event) => {
