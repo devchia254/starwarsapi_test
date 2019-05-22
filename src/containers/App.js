@@ -47,7 +47,7 @@ class App extends Component {
     const sortedData = api_data.sort((a, b) => a.name.localeCompare(b.name)); // Sorts fetched data
 
     const filteredData = sortedData.filter(person =>{
-      return person.name.toLowerCase().includes(searchfield.toLowerCase());
+      return person.name.toLowerCase().includes(searchfield.toLowerCase()); // Converts all names to lowercase for searchfield
     })
 
     console.log(filteredData, "filter")
