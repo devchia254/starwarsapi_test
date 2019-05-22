@@ -5,6 +5,7 @@ const CardList = ({ api_data }) => {
   const listPeople = api_data.map((user, i) => {
     return (
       <Card
+        id = {i+=1}
         key={user.url}
         name={user.name}
         weight={user.mass}

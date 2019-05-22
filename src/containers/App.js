@@ -33,43 +33,25 @@ class App extends Component {
       .then(results => this.setState({api_data: charsData}))
       .catch((err) => console.log('ERROR, please check', err))
 
-    // const urls = [
-    //   'https://swapi.co/api/people/?page=1',
-    //   'https://swapi.co/api/people/?page=2',
-    //   'https://swapi.co/api/people/?page=3',
-    //   'https://swapi.co/api/people/?page=4',
-    //   'https://swapi.co/api/people/?page=5',
-    //   'https://swapi.co/api/people/?page=6',
-    //   'https://swapi.co/api/people/?page=7',
-    //   'https://swapi.co/api/people/?page=8',
-    //   'https://swapi.co/api/people/?page=9'
-    // ]
-
-    // Promise.all(urls.map(async url => {
-    //   const response = await fetch(url);
-    //   const ppl = await response.json();
-    //   var combineAllPeople = this.state.api_data;
-    //   combineAllPeople.push(ppl.results);
-
-    //   var sortedAllPeople = combineAllPeople
-    //     .flat()
-    //     .sort((a, b) => a.name.localeCompare(b.name));
-      
-    //   this.setState({api_data: sortedAllPeople})
-    // }))
-    //   .catch(error => console.log ('Error fetching people', error));
-
   }
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
+    console.log(event.target.value, "searchbox");
   }
 
   render() {
+
     const { api_data, searchfield } = this.state;
-    const filteredData = api_data.filter(person =>{
+   
+    const sortedData = api_data.sort((a, b) => a.name.localeCompare(b.name)); // Sorts fetched data
+
+    const filteredData = sortedData.filter(person =>{
       return person.name.toLowerCase().includes(searchfield.toLowerCase());
     })
+
+    console.log(filteredData, "filter")
+
     return !api_data.length ?
       <h1>Loading</h1> :
       (
