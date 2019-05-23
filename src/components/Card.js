@@ -42,7 +42,7 @@ class Card extends Component {
     const { name, weight, id } = this.props;
 
     return (
-      <div className='tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5'>
+      <div className='tc grow bg-washed-yellow br3 pa3 ma3 dib bw2 shadow-5' style={{boxShadow: '0 0 2px 1px #FFFDE7, 0 0 4px 2px #FFF59D, 0 0 8px 4px #FFEE58'}}>
         <img alt='robots' src={`https://robohash.org/${id}?size=200x200`} />
         <h3> Name: { name }</h3>
         <h4> Species: { this.state.species }</h4>
