@@ -22,6 +22,13 @@ h1 {
   color: #fffc00;
 }
 
-.f1 {
-	font-size: 4em;
+h1.Title {
+	font-size: 6rem;
+	color: black;
+	/* text-shadow: 2px 2px 4px #fff; */
+	text-shadow: 0px 0px 8px #FFFDE7, 0px 0px 16px #FFF59D, 0px 0px 32px #FFEE58;
 }
+
+/* .f1 {
+	font-size: 4em;
+} */

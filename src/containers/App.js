@@ -56,7 +56,7 @@ class App extends Component {
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <h1 className='f1'>STAR WARS</h1>
+          <h1 className='f1 Title'>STAR WARS</h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
             <CardList api_data={filteredData} />
