@@ -8,27 +8,47 @@
 	font-weight:normal;
 	font-style:normal;}
 
-/* @font-face {
-font-family: 'SEGA LOGO FONT';
-font-style: normal;
-font-weight: normal;
-src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
-} */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+* {
+	box-sizing: border-box;
+}
 
 h1 {
-  font-family: 'star jedi';
-  font-weight: 200;
-  color: #fffc00;
+	font-family: 'star jedi';
+	font-weight: 200;
+	color: #fffc00;
+}
+
+h2, h3, h4, h5, h6, p {
+	font-family: 'Roboto', sans-serif;
+}
+h2 {
+	font-size: 3rem;
+	color: #FFFF8D;
+}
+
+h2.Sub-title {
+	margin-top: 0;
+	margin-bottom: 0.25em;
+	text-shadow: 1px 1px 1px #A39A4C,
+	1px 2px 1px #A39A4C,
+	1px 3px 1px #A39A4C,
+	1px 4px 1px #A39A4C,
+	1px 5px 1px #A39A4C,
+	1px 12px 4px rgba(16,16,16,0.4),/* shadow */
+	1px 16px 8px rgba(16,16,16,0.2),/* shadow */
+	1px 15px 25px rgba(16,16,16,0.2),   
+	1px 20px 40px rgba(16,16,16,0.4);
 }
 
 h1.Title {
 	font-size: 6rem;
 	color: black;
-	/* text-shadow: 2px 2px 4px #fff; */
-	text-shadow: 0px 0px 8px #FFFDE7, 0px 0px 16px #FFF59D, 0px 0px 32px #FFEE58;
+	text-shadow: 0px 0px 4px #FFFDE7, 0px 0px 8px #FFF59D, 0px 0px 38px #FFEE58;
+	margin-bottom: 0.25em;
 }
 
-/* .f1 {
-	font-size: 4em;
-} */
+.Card:hover {
+	box-shadow: 0 0 2px 1px #FFFDE7, 0 0 4px 2px #FFF59D, 0 0 16px 8px #FFEE58;
+}

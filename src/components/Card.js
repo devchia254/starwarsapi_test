@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import '../containers/App.css';
+import '../containers/App.css';
 
 class Card extends Component {
   
@@ -39,15 +39,18 @@ class Card extends Component {
 
 
   render() {
-    const { name, weight, id } = this.props;
+    const { name, weight, id, birth, gender } = this.props;
 
     return (
-      <div className='tc grow bg-washed-yellow br3 pa3 ma3 dib bw2 shadow-5' style={{boxShadow: '0 0 2px 1px #FFFDE7, 0 0 4px 2px #FFF59D, 0 0 8px 4px #FFEE58'}}>
+      <div className='Card tc grow bg-washed-yellow br3 pa3 ma3 dib bw2 shadow-5'>
         <img alt='robots' src={`https://robohash.org/${id}?size=200x200`} />
-        <h3> Name: { name }</h3>
-        <h4> Species: { this.state.species }</h4>
-        <h4> Weight: { weight }</h4>
-        <h4> id: { id }</h4>
+        <p><b>Name:</b> { name } </p>
+        <p><b>Weight:</b> { weight }</p>
+        <p><b>Birth:</b> { birth }</p>
+        <p><b>Gender:</b> { gender }</p>
+        <p><b>Species:</b> { this.state.species }</p>
+        
+        {/* <p> id: { id }</p> */}
         {/* <div className='films-list'>Featured in:
             <ul>
               { this.state.films.map((film, i) => (
