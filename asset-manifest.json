@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/starwars_api/static/css/main.f8af1171.chunk.css",
-    "main.js": "/starwars_api/static/js/main.95be8fcd.chunk.js",
-    "main.js.map": "/starwars_api/static/js/main.95be8fcd.chunk.js.map",
-    "runtime~main.js": "/starwars_api/static/js/runtime~main.6aa45f16.js",
-    "runtime~main.js.map": "/starwars_api/static/js/runtime~main.6aa45f16.js.map",
-    "static/css/2.2ec98f22.chunk.css": "/starwars_api/static/css/2.2ec98f22.chunk.css",
-    "static/js/2.c846591c.chunk.js": "/starwars_api/static/js/2.c846591c.chunk.js",
-    "static/js/2.c846591c.chunk.js.map": "/starwars_api/static/js/2.c846591c.chunk.js.map",
-    "index.html": "/starwars_api/index.html",
-    "precache-manifest.a93ae9e946f5b36a0da50a70347c7c9a.js": "/starwars_api/precache-manifest.a93ae9e946f5b36a0da50a70347c7c9a.js",
-    "service-worker.js": "/starwars_api/service-worker.js",
-    "static/css/2.2ec98f22.chunk.css.map": "/starwars_api/static/css/2.2ec98f22.chunk.css.map",
-    "static/css/main.f8af1171.chunk.css.map": "/starwars_api/static/css/main.f8af1171.chunk.css.map",
-    "static/media/App.css": "/starwars_api/static/media/Starjedi.7248a9a5.eot",
-    "static/media/index.css": "/starwars_api/static/media/starwars_bg.ee763277.jpg"
+    "main.css": "/starwarsapi_test/static/css/main.42c8dd7b.chunk.css",
+    "main.js": "/starwarsapi_test/static/js/main.b2386b26.chunk.js",
+    "main.js.map": "/starwarsapi_test/static/js/main.b2386b26.chunk.js.map",
+    "runtime~main.js": "/starwarsapi_test/static/js/runtime~main.5d3fbf68.js",
+    "runtime~main.js.map": "/starwarsapi_test/static/js/runtime~main.5d3fbf68.js.map",
+    "static/css/2.2ec98f22.chunk.css": "/starwarsapi_test/static/css/2.2ec98f22.chunk.css",
+    "static/js/2.c846591c.chunk.js": "/starwarsapi_test/static/js/2.c846591c.chunk.js",
+    "static/js/2.c846591c.chunk.js.map": "/starwarsapi_test/static/js/2.c846591c.chunk.js.map",
+    "index.html": "/starwarsapi_test/index.html",
+    "precache-manifest.ca645eddd772e72a7afe9f845a507c40.js": "/starwarsapi_test/precache-manifest.ca645eddd772e72a7afe9f845a507c40.js",
+    "service-worker.js": "/starwarsapi_test/service-worker.js",
+    "static/css/2.2ec98f22.chunk.css.map": "/starwarsapi_test/static/css/2.2ec98f22.chunk.css.map",
+    "static/css/main.42c8dd7b.chunk.css.map": "/starwarsapi_test/static/css/main.42c8dd7b.chunk.css.map",
+    "static/media/App.css": "/starwarsapi_test/static/media/Starjedi.7248a9a5.eot",
+    "static/media/index.css": "/starwarsapi_test/static/media/starwars_bg.ee763277.jpg"
   }
 }
