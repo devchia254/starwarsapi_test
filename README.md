@@ -1,7 +1,5 @@
-# robofriends
-Tutorial for udemy course - React
-To run the project:
+#SWAPI API for testing React Apps
 
-1. Clone this repo
-2. Run `npm install`
-3. Run `npm start`
+API: https://swapi.co/
+
+*Take note that when you want to update changes to your published site just `npm run deploy`.
