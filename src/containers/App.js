@@ -57,7 +57,7 @@ class App extends Component {
       (
         <div className='tc'>
           <h1 className='f1 Title'>STAR WARS</h1>
-          <h2 className='Sub-title'>Robot Card Collection</h2>
+          <h2 className='Sub-title'>Bla Bla Bla.....</h2>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
             <CardList api_data={filteredData} />

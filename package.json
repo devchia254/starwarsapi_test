@@ -2,7 +2,7 @@
   "name": "starwars_api",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/devchia254/starwars_api",
+  "homepage": "https://devchia254.github.io/starwarsapi_test",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.2.0",
